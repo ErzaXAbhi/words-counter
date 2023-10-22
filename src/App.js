@@ -6,7 +6,7 @@ import About from "./components/about";
 export default function MyApp() {
   return (
     <>
-      <Navbar title="WordsCounter" />
+      <Navbar title="WordsCounter" aboutUs="About" />
 
       <div className="container my-5">
         {/* <TextForm heading="Please Enter the Text below..." /> */}
