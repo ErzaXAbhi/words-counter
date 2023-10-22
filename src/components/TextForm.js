@@ -24,7 +24,7 @@ export default function TextForm(props) {
   return (
     <>
       <div className="container">
-        <h1>{props.heading}</h1>
+        <h1 className="text-uppercase">{props.heading}</h1>
         <div className="mb-3">
           <textarea
             className="form-control"
@@ -44,7 +44,7 @@ export default function TextForm(props) {
           Clear
         </button>
       </div>
-      <div className="container my-5">
+      <div className="container my-2">
         <h2>Your text summary</h2>
         <p>
           {text.split(" ").length} words, {text.length} charectors
