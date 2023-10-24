@@ -34,7 +34,10 @@ export default function TextForm(props) {
   const [text, setText] = useState("");
   return (
     <>
-      <div className="container">
+      <div
+        className="container"
+        style={{ color: props.mode === "dark" ? "white" : "black" }}
+      >
         <h1 className="text-uppercase">{props.heading}</h1>
         <div className="mb-3">
           <textarea
@@ -43,6 +46,10 @@ export default function TextForm(props) {
             value={text}
             onChange={handleOnChange}
             id="myBox"
+            style={{
+              background: props.mode === "dark" ? "grey" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+            }}
           ></textarea>
         </div>
         <button className="btn btn-dark" onClick={handleUpClick}>
@@ -61,14 +68,21 @@ export default function TextForm(props) {
           Remove extra spaces
         </button>
       </div>
-      <div className="container my-2">
+      <div
+        className="container my-2"
+        style={{ color: props.mode === "dark" ? "white" : "black" }}
+      >
         <h2>Your text summary</h2>
         <p>
           {text.split(" ").length} words, {text.length} charectors
         </p>
         <p>{0.008 * text.split(" ").length} Minutes to read</p>
         <h3>Preview</h3>
-        <p>{text}</p>
+        <p>
+          {text.length > 0
+            ? text
+            : "Enter something in the textbox above to preeview here."}
+        </p>
       </div>
     </>
   );
