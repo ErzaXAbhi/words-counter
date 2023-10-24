@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import About from "./components/about";
-// import TextForm from "./components/TextForm";
+// import About from "./components/about";
+import TextForm from "./components/TextForm";
 
 export default function MyApp() {
   return (
@@ -9,9 +9,9 @@ export default function MyApp() {
       <Navbar title="WordsCounter" aboutUs="About" />
 
       <div className="container my-5">
-        {/* <TextForm heading="Please Enter the Text below..." /> */}
+        <TextForm heading="Please Enter the Text below..." />
 
-        <About />
+        {/* <About /> */}
       </div>
     </>
   );

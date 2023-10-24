@@ -13,6 +13,7 @@ function About() {
       setMyStyle({
         color: "white",
         backgroundColor: "black",
+        border: "1px solid white",
       });
       setBtnText("Enable Light Mode");
     } else {
@@ -26,7 +27,7 @@ function About() {
 
   return (
     <>
-      <div className="container" style={myStyle}>
+      <div className="container my-2" style={myStyle}>
         <h1 className="my-3">About Us</h1>
         <div className="accordion " id="accordionExample">
           <div className="accordion-item ">
@@ -130,7 +131,7 @@ function About() {
           </div>
         </div>
         <div className="container my-3">
-          <button onClick={toggleStyle} className="btn btn-light">
+          <button onClick={toggleStyle} className="btn btn-light border-dark">
             {btnText}
           </button>
         </div>
