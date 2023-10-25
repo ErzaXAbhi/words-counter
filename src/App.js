@@ -31,6 +31,41 @@ export default function MyApp() {
       showAlert("Light mode has been enabled", "success");
     }
   };
+
+  const indigoMode = () => {
+    if (mode === "light") {
+      setMode("indigo");
+      document.body.style.backgroundColor = "#4B0082";
+      showAlert("Indigo mode has been enabled", "success");
+    } else {
+      setMode("light");
+      document.body.style.backgroundColor = "white";
+      showAlert("Light mode has been enabled", "success");
+    }
+  };
+  const wineMode = () => {
+    if (mode === "light") {
+      setMode("wine");
+      document.body.style.backgroundColor = "#722F37";
+      showAlert("Wine mode has been enabled", "success");
+    } else {
+      setMode("light");
+      document.body.style.backgroundColor = "white";
+      showAlert("Light mode has been enabled", "success");
+    }
+  };
+  const delftMode = () => {
+    if (mode === "light") {
+      setMode("delft");
+      document.body.style.backgroundColor = "#1F305E";
+      showAlert("Delft mode has been enabled", "success");
+    } else {
+      setMode("light");
+      document.body.style.backgroundColor = "white";
+      showAlert("Light mode has been enabled", "success");
+    }
+  };
+
   return (
     <>
       <Navbar
@@ -38,6 +73,9 @@ export default function MyApp() {
         aboutUs="About"
         mode={mode}
         toggleMode={toggleMode}
+        indigoMode={indigoMode}
+        wineMode={wineMode}
+        delftMode={delftMode}
       />
       <Alert alert={alert} />
 

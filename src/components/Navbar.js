@@ -46,6 +46,61 @@ export default function Navbar(props) {
             </button>
           </form> */}
           <div
+            className="btn-group mx-5"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              className="btn-check"
+              name="btnradio"
+              id="btnradio1"
+              autocomplete="off"
+              checked
+              onClick={props.indigoMode}
+            />
+            <label
+              className={`btn btn-${
+                props.mode === "light" ? "light" : "indigo"
+              }`}
+              for="btnradio1"
+            >
+              Indigo {/*  4B0082 */}
+            </label>
+
+            <input
+              type="radio"
+              className="btn-check"
+              name="btnradio"
+              id="btnradio2"
+              autocomplete="off"
+              onClick={props.wineMode}
+            />
+            <label
+              className={`btn btn-${props.mode === "light" ? "light" : "wine"}`}
+              for="btnradio2"
+            >
+              Wine {/* 722F37 */}
+            </label>
+
+            <input
+              type="radio"
+              className="btn-check"
+              name="btnradio"
+              id="btnradio3"
+              autocomplete="off"
+              onClick={props.delftMode}
+            />
+            <label
+              className={`btn btn-${
+                props.mode === "light" ? "light" : "delft"
+              }`}
+              for="btnradio3"
+            >
+              Delft {/* 1F305E */}
+            </label>
+          </div>
+          <div
             className={`form-check form-switch text-${
               props.mode === "light" ? "dark" : "light"
             }`}
